@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩相镇个人资料、职业生涯、代表作品及行业影响。深入了解这位专业人士的成就与贡献。">
+    <meta name="keywords" content="韩相镇, 专业人士, 职业生涯, 代表作品, 个人简介">
+    <title>韩相镇-个人资料与职业生涯档案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* Profile Grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .avatar-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #adb5bd;
+            font-weight: bold;
+        }
+
+        .profile-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .role-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-list {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+
+        .info-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item.left {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: white;
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.right::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Works Grid */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .work-img {
+            height: 160px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+        }
+
+        .work-body {
+            padding: 1.5rem;
+        }
+
+        .work-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-body p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .work-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.25rem;
+            background-color: #fafafa;
+            color: #555;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 1.25rem;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item.left, .timeline-item.right {
+                left: 0;
+                text-align: left;
+            }
+
+            .timeline-item.left::after, .timeline-item.right::after {
+                left: 23px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>韩相镇</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#profile" class="active">个人简介</a></li>
+                    <li><a href="#career">职业生涯</a></li>
+                    <li><a href="#works">代表作品</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>韩相镇</h1>
+            <p>致力于在专业领域深耕细作，以卓越的执行力与创新能力推动项目发展，是值得信赖的行业专家。</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>年从业经验</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>成功项目</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>客户满意度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Profile Section -->
+        <section id="profile" class="section-title">
+            <h2>关于韩相镇</h2>
+            <p>深入了解这位专业人士的背景与理念</p>
+        </section>
+
+        <div class="profile-grid">
+            <div class="profile-card">
+                <div class="avatar-placeholder">HSJ</div>
+                <h3>韩相镇</h3>
+                <span class="role-badge">高级顾问 / 专家</span>
+                <p style="margin-top: 1rem; color: #666;">拥有深厚的行业背景与实战经验，专注于解决复杂问题并提供战略建议。</p>
+            </div>
+            <div class="profile-info">
+                <h3>核心信息</h3>
+                <ul class="info-list">
+                    <li><span class="info-label">专业领域</span> <span>战略规划 / 项目管理 / 技术咨询</span></li>
+                    <li><span class="info-label">从业年限</span> <span>10年以上</span></li>
+                    <li><span class="info-label">教育背景</span> <span>某知名大学 硕士学位</span></li>
+                    <li><span class="info-label">执业资格</span> <span>高级工程师 / 职业经理人</span></li>
+                    <li><span class="info-label">所在机构</span> <span>独立顾问 / 专业机构合作</span></li>
+                </ul>
+                <div style="margin-top: 2rem;">
+                    <p><strong>个人理念：</strong> 坚信细节决定成败，注重流程优化与团队协作，致力于通过科学的方法论提升工作效率与成果质量。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Career Timeline -->
+        <section id="career" class="section-title">
+            <h2>职业生涯历程</h2>
+            <p>关键节点与发展轨迹</p>
+        </section>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-date">2015年</div>
+                    <h3>初入行业</h3>
+                    <p>加入知名企业，担任初级分析师，开始积累行业数据与市场洞察经验。</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">2018年</div>
+                    <h3>晋升主管</h3>
+                    <p>因出色的项目交付能力被提拔为部门主管，负责带领团队完成多个核心项目。</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-date">2020年</div>
+                    <h3>战略转型</h3>
+                    <p>转型为高级顾问，开始为多家企业提供定制化解决方案，拓展业务边界。</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">2023年</div>
+                    <h3>行业认可</h3>
+                    <p>获得年度行业杰出贡献奖，并在专业论坛上发表演讲，分享实战经验。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Works Section -->
+        <section id="works" class="section-title">
+            <h2>代表项目与成就</h2>
+            <p>部分代表性成果展示</p>
+        </section>
+        <div class="works-grid">
+            <article class="work-card">
+                <div class="work-img">📊</div>
+                <div class="work-body">
+                    <h3>数字化转型战略咨询</h3>
+                    <p>为某大型制造企业制定全面的数字化转型路线图，成功提升运营效率30%。</p>
+                    <div class="work-tags">
+                        <span class="tag">战略规划</span>
+                        <span class="tag">咨询</span>
+                    </div>
+                </div>
+            </article>
+            <article class="work-card">
+                <div class="work-img">🚀</div>
+                <div class="work-body">
+                    <h3>新产品上市推广</h3>
+                    <p>主导新产品从0到1的推广全案，通过精准的市场定位实现首月销量破万。</p>
+                    <div class="work-tags">
+                        <span class="tag">市场营销</span>
+                        <span class="tag">推广</span>
+                    </div>
+                </div>
+            </article>
+            <article class="work-card">
+                <div class="work-img">⚙️</div>
+                <div class="work-body">
+                    <h3>流程优化项目</h3>
+                    <p>针对企业内部冗余流程进行重组，显著降低了人力成本并提高了响应速度。</p>
+                    <div class="work-tags">
+                        <span class="tag">管理咨询</span>
+                        <span class="tag">优化</span>
+                    </div>
+                </div>
+            </article>
+            <article class="work-card">
+                <div class="work-img">🎓</div>
+                <div class="work-body">
+                    <h3>行业白皮书发布</h3>
+                    <p>参与撰写年度行业白皮书，深入分析市场趋势，为行业同仁提供参考。</p>
+                    <div class="work-tags">
+                        <span class="tag">研究</span>
+                        <span class="tag">报告</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-title">
+            <h2>常见问题解答</h2>
+            <p>关于韩相镇及服务的常见疑问</p>
+        </section>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">韩相镇目前提供哪些类型的服务？</div>
+                <div class="faq-answer">
+                    <p>韩相镇目前主要提供战略咨询、项目管理辅导以及行业趋势分析服务。根据客户的具体需求，也可以提供定制化的解决方案。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何联系韩相镇进行合作咨询？</div>
+                <div class="faq-answer">
+                    <p>您可以通过页面底部的联系方式或发送邮件至官方邮箱与我们取得联系。我们的团队会在收到信息后的24小时内与您回复。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">韩相镇的工作语言是什么？</div>
+                <div class="faq-answer">
+                    <p>韩相镇的工作语言主要为中文，同时也具备流利的英语沟通能力，能够胜任涉及国际业务的咨询项目。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 韩相镇个人资料中心. 保留所有权利.</p>
+            <p>本网站内容仅供参考，不构成任何形式的商业建议。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
