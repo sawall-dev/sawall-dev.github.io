@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="91cao就要草网提供最新的网络漫画在线阅读服务，涵盖日漫、韩漫、国漫等多种类型，高清无广告，更新速度快，是漫画爱好者的首选平台。">
+    <meta name="keywords" content="91cao就要草网,漫画阅读,在线漫画,日韩漫画,高清漫画,免费漫画">
+    <title>91cao就要草网-最新高清网络漫画在线阅读平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --accent-color: #ffa502;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --spacing-unit: 16px;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after, .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            background: var(--bg-color);
+            border-radius: 20px;
+            padding: 6px 16px;
+            width: 300px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            flex: 1;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%);
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 16px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .section-link {
+            font-size: 14px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .section-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Grid Layout */
+        .manga-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 24px;
+        }
+
+        .manga-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .manga-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            overflow: hidden;
+            position: relative;
+            background: #eee;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .manga-card:hover .card-cover img {
+            transform: scale(1.05);
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--secondary-color);
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: var(--accent-color);
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .badge.new {
+            background: #2ed573;
+        }
+
+        .badge.hot {
+            background: #ff4757;
+        }
+
+        /* Categories Section */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        .category-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .category-item:hover .category-icon {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-color);
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .category-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Ranking List */
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ranking-item {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 12px;
+            box-shadow: var(--shadow-sm);
+            align-items: center;
+            gap: 16px;
+            transition: var(--transition);
+        }
+
+        .ranking-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .rank-num {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-light);
+            width: 30px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .rank-num.top-1 { color: #ff4757; }
+        .rank-num.top-2 { color: #ffa502; }
+        .rank-num.top-3 { color: #eccc68; }
+
+        .rank-cover {
+            width: 60px;
+            height: 80px;
+            border-radius: 6px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .rank-info {
+            flex: 1;
+        }
+
+        .rank-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .rank-stats {
+            font-size: 12px;
+            color: var(--text-light);
+            display: flex;
+            gap: 12px;
+        }
+
+        .rank-action {
+            padding: 8px 16px;
+            background: var(--bg-color);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: #a4b0be;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 12px;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+                gap: 16px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .manga-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <span>91</span>cao就要草网
+        </a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <nav class="nav-menu" id="navMenu">
+            <a href="#" class="active">首页</a>
+            <a href="#">日韩漫画</a>
+            <a href="#">国产漫画</a>
+            <a href="#">排行榜</a>
+            <a href="#">更新列表</a>
+            <a href="#">我的收藏</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索漫画名称...">
+            <button>🔍</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>海量高清漫画，畅快阅读体验</h1>
+            <p>汇集全网热门日韩漫画与原创国漫，更新速度快，无广告干扰，随时随地开启阅读之旅。</p>
+            <div class="hero-tags">
+                <span class="tag">🔥 热门推荐</span>
+                <span class="tag">⚡ 实时更新</span>
+                <span class="tag">💎 高清画质</span>
+                <span class="tag">📱 多端同步</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Category Navigation -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">漫画分类</h2>
+                <a href="#" class="section-link">查看全部 ></a>
+            </div>
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-icon">⚔️</div>
+                    <div class="category-name">热血冒险</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">💕</div>
+                    <div class="category-name">恋爱校园</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">👻</div>
+                    <div class="category-name">恐怖惊悚</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">👑</div>
+                    <div class="category-name">奇幻玄幻</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🧟</div>
+                    <div class="category-name">末日求生</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🏃</div>
+                    <div class="category-name">运动竞技</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🕵️</div>
+                    <div class="category-name">悬疑推理</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🎨</div>
+                    <div class="category-name">搞笑吐槽</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Updates -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">热门更新</h2>
+                <a href="#" class="section-link">更多更新 ></a>
+            </div>
+            <div class="manga-grid">
+                <article class="manga-card">
+                    <span class="badge hot">HOT</span>
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/manga1/300/450" alt="漫画封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">魔王转生为勇者</h3>
+                        <div class="card-meta">
+                            <span>日韩漫画</span>
+                            <span>更新至 128话</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="manga-card">
+                    <span class="badge new">NEW</span>
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/manga2/300/450" alt="漫画封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">重生之都市修仙</h3>
+                        <div class="card-meta">
+                            <span>国产漫画</span>
+                            <span>更新至 05话</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="manga-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/manga3/300/450" alt="漫画封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">末世之机械神座</h3>
+                        <div class="card-meta">
+                            <span>科幻漫画</span>
+                            <span>更新至 89话</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="manga-card">
+                    <span class="badge hot">HOT</span>
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/manga4/300/450" alt="漫画封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">恋爱百分百</h3>
+                        <div class="card-meta">
+                            <span>恋爱校园</span>
+                            <span>更新至 245话</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="manga-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/manga5/300/450" alt="漫画封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">暗夜侦探社</h3>
+                        <div class="card-meta">
+                            <span>悬疑推理</span>
+                            <span>更新至 12话</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="manga-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/manga6/300/450" alt="漫画封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">奇幻森林物语</h3>
+                        <div class="card-meta">
+                            <span>奇幻玄幻</span>
+                            <span>连载中</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ranking Section -->
+        <section style="margin-top: 60px;">
+            <div class="section-header">
+                <h2 class="section-title">人气排行榜</h2>
+                <a href="#" class="section-link">查看榜单 ></a>
+            </div>
+            <div class="ranking-list">
+                <div class="ranking-item">
+                    <div class="rank-num top-1">1</div>
+                    <img src="https://picsum.photos/seed/rank1/120/160" class="rank-cover" alt="封面">
+                    <div class="rank-info">
+                        <h3 class="rank-title">神级剑神</h3>
+                        <div class="rank-stats">
+                            <span>🔥 128.5万热度</span>
+                            <span>👁 456万阅读</span>
+                        </div>
+                    </div>
+                    <div class="rank-action">立即阅读</div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="rank-num top-2">2</div>
+                    <img src="https://picsum.photos/seed/rank2/120/160" class="rank-cover" alt="封面">
+                    <div class="rank-info">
+                        <h3 class="rank-title">绝世高手在都市</h3>
+                        <div class="rank-stats">
+                            <span>🔥 98.2万热度</span>
+                            <span>👁 320万阅读</span>
+                        </div>
+                    </div>
+                    <div class="rank-action">立即阅读</div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="rank-num top-3">3</div>
+                    <img src="https://picsum.photos/seed/rank3/120/160" class="rank-cover" alt="封面">
+                    <div class="rank-info">
+                        <h3 class="rank-title">异界之召唤师</h3>
+                        <div class="rank-stats">
+                            <span>🔥 85.6万热度</span>
+                            <span>👁 290万阅读</span>
+                        </div>
+                    </div>
+                    <div class="rank-action">立即阅读</div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="rank-num">4</div>
+                    <img src="https://picsum.photos/seed/rank4/120/160" class="rank-cover" alt="封面">
+                    <div class="rank-info">
+                        <h3 class="rank-title">修罗武神</h3>
+                        <div class="rank-stats">
+                            <span>🔥 72.1万热度</span>
+                            <span>👁 250万阅读</span>
+                        </div>
+                    </div>
+                    <div class="rank-action">立即阅读</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature / Info Section -->
+        <section style="margin-top: 60px; background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+            <div class="section-header" style="margin-bottom: 20px; border: none; padding: 0;">
+                <h2 class="section-title">平台优势</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 40px; margin-bottom: 10px;">🚀</div>
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">极速更新</h3>
+                    <p style="color: var(--text-light); font-size: 14px;">第一时间同步各大漫画平台最新章节，绝不等待。</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 40px; margin-bottom: 10px;">🎨</div>
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">高清画质</h3>
+                    <p style="color: var(--text-light); font-size: 14px;">支持4K高清解析，细节还原，阅读体验极佳。</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 40px; margin-bottom: 10px;">🛡️</div>
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">安全无毒</h3>
+                    <p style="color: var(--text-light); font-size: 14px;">纯净阅读环境，无广告弹窗，保护您的设备安全。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <ul>
+                <li><a href="#">网站简介</a></li>
+                <li><a href="#">联系方式</a></li>
+                <li><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>快速导航</h4>
+            <ul>
+                <li><a href="#">日韩漫画</a></li>
+                <li><a href="#">国产漫画</a></li>
+                <li><a href="#">漫画分类</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>帮助中心</h4>
+            <ul>
+                <li><a href="#">用户协议</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">版权声明</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>关注我们</h4>
+            <p style="font-size: 14px; line-height: 1.8;">91cao就要草网致力于为漫画爱好者提供最优质的在线阅读服务。</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 91cao就要草网 版权所有 | 本站内容仅供学习交流，请勿用于商业用途</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        nav.classList.toggle('active');
+    }
+
+    // Simple interaction for search button
+    const searchBtn = document.querySelector('.search-box button');
+    const searchInput = document.querySelector('.search-box input');
+    
+    searchBtn.addEventListener('click', () => {
+        if(searchInput.value.trim()) {
+            alert('正在搜索：' + searchInput.value);
+        } else {
+            searchInput.focus();
+        }
+    });
+</script>
+
+</body>
+  </html>
