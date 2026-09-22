@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OPPO Reno3 手机深度评测与参数详解。了解OPPO Reno3的5G双模支持、微距视频拍摄、轻薄机身设计以及ColorOS 7.1系统体验。">
+    <meta name="keywords" content="opporeno3, OPPO Reno3, 5G手机评测, OPPO手机参数, 轻薄手机推荐">
+    <title>OPPO Reno3 - 轻薄5G手机评测与参数详解</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #008f5a;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff6b00;
+            --bg-light: #f9f9f9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .cta-btn:hover {
+            background-color: #007a48;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f0fdf9 0%, #fff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: inline-flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: rgba(0, 143, 90, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Specs Grid */
+        .specs-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .spec-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .spec-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 20px;
+            fill: var(--primary-color);
+        }
+
+        .spec-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .spec-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Feature Highlight */
+        .feature-section {
+            background-color: var(--bg-light);
+            padding: 80px 0;
+        }
+
+        .feature-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .feature-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .check-icon {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 60px 0;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #fafafa;
+        }
+
+        .highlight-col {
+            background-color: rgba(0, 143, 90, 0.05);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for single file demo */
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .feature-container {
+                flex-direction: column;
+            }
+
+            .feature-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                OPPO评测
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#specs">参数规格</a>
+                <a href="#features">特色功能</a>
+                <a href="#comparison">对比评测</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#" class="cta-btn">查看详情</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-tags">
+                    <span class="tag">5G双模</span>
+                    <span class="tag">30倍变焦</span>
+                    <span class="tag">轻薄设计</span>
+                </div>
+                <div class="hero-content">
+                    <h1>OPPO Reno3：轻薄机身下的5G全能旗舰</h1>
+                    <p>搭载高通骁龙765G 5G处理器，支持双模5G网络。拥有超清夜景视频、微距视频拍摄功能，配合ColorOS 7.1系统，为用户带来流畅的5G体验。</p>
+                    <div style="margin-top: 30px;">
+                        <a href="#specs" style="background: var(--primary-color); color: white; padding: 12px 30px; border-radius: 30px; font-weight: bold; display: inline-block;">探索参数</a>
+                        <a href="#features" style="background: transparent; color: var(--text-main); padding: 12px 30px; border-radius: 30px; font-weight: bold; display: inline-block; margin-left: 10px;">了解特色</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Section -->
+        <section id="specs" class="specs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心参数一览</h2>
+                    <p>硬件配置全面升级，满足多场景使用需求</p>
+                </div>
+                <div class="specs-grid">
+                    <article class="spec-card">
+                        <svg class="spec-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        <h3>骁龙765G 5G芯片</h3>
+                        <p>集成X52 5G基带，支持NSA/SA双模5G网络，高性能低功耗，畅玩大型游戏。</p>
+                    </article>
+                    <article class="spec-card">
+                        <svg class="spec-icon" viewBox="0 0 24 24">
+                            <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                        </svg>
+                        <h3>4800万像素四摄</h3>
+                        <p>4800万主摄+800万超广角+200万长焦+200万微距。支持30倍混合变焦与微距视频。</p>
+                    </article>
+                    <article class="spec-card">
+                        <svg class="spec-icon" viewBox="0 0 24 24">
+                            <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
+                        </svg>
+                        <h3>轻薄机身设计</h3>
+                        <p>机身厚度仅7.97mm，重量175g，采用极光渐变配色，手感温润细腻。</p>
+                    </article>
+                    <article class="spec-card">
+                        <svg class="spec-icon" viewBox="0 0 24 24">
+                            <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+                        </svg>
+                        <h3>VOOC 3.0闪充</h3>
+                        <p>配备30W VOOC闪充，支持边充边玩，30分钟即可充电80%，告别电量焦虑。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Highlight -->
+        <section id="features" class="feature-section">
+            <div class="container feature-container">
+                <div class="feature-image">
+                    <!-- Using a placeholder that represents a camera/tech shot -->
+                    <img src="https://picsum.photos/seed/opporeno3/600/400" alt="OPPO Reno3 拍摄效果展示">
+                </div>
+                <div class="feature-text">
+                    <h2>微距视频与夜景视频</h2>
+                    <p style="margin-bottom: 20px; color: var(--text-light);">OPPO Reno3 独创的微距视频功能，打破了手机只能拍摄静态微距的局限。你可以近距离记录花朵的绽放、昆虫的飞舞，每一帧都清晰生动。</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span><strong>30倍混合变焦：</strong>支持2倍混合变焦与15倍数码变焦，远摄画面依然清晰。</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span><strong>夜景视频算法：</strong>采用夜景视频算法，即使在弱光环境下，画面依然稳定明亮。</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span><strong>全场景人像模式：</strong>无论是白天还是夜晚，都能拍出自然肤色和虚化效果。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>竞品对比：Reno3 vs Reno2</h2>
+                    <p>主要升级点一览</p>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>对比项目</th>
+                                <th>OPPO Reno3</th>
+                                <th>OPPO Reno2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>网络制式</td>
+                                <td class="highlight-col">5G双模 (NSA/SA)</td>
+                                <td>4G LTE</td>
+                            </tr>
+                            <tr>
+                                <td>处理器</td>
+                                <td class="highlight-col">骁龙765G (集成基带)</td>
+                                <td>骁龙730G</td>
+                            </tr>
+                            <tr>
+                                <td>后置摄像头</td>
+                                <td class="highlight-col">4800万主摄 + 超广角 + 长焦 + 微距</td>
+                                <td>4800万主摄 + 超广角 + 长焦 + 人像</td>
+                            </tr>
+                            <tr>
+                                <td>变焦能力</td>
+                                <td class="highlight-col">最高30倍混合变焦</td>
+                                <td>最高20倍数码变焦</td>
+                            </tr>
+                            <tr>
+                                <td>机身厚度</td>
+                                <td class="highlight-col">7.97mm</td>
+                                <td>9.5mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container faq-container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">OPPO Reno3 支持哪些5G频段？</div>
+                    <div class="faq-answer">OPPO Reno3支持n1, n3, n28, n41, n78等主流5G频段，在国内主要运营商的5G网络下均可正常使用。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Reno3 的电池容量是多少？</div>
+                    <div class="faq-answer">OPPO Reno3配备4025mAh电池，配合30W VOOC 3.0闪充，能够满足一天的正常使用需求。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持红外遥控功能吗？</div>
+                    <div class="faq-answer">OPPO Reno3 系列不支持红外遥控功能。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">微距视频功能如何开启？</div>
+                    <div class="faq-answer">进入相机应用，切换到“微距视频”模式，将手机摄像头贴近被摄物体即可开始录制。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="font-size: 0.9rem; color: #999;">本站致力于提供OPPO Reno3系列的详细参数解读、功能评测及使用指南，帮助用户做出明智的购机决策。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">OPPO 官方网站</a></li>
+                        <li><a href="#">ColorOS 官方社区</a></li>
+                        <li><a href="#">售后服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#specs">参数规格</a></li>
+                        <li><a href="#features">特色功能</a></li>
+                        <li><a href="#comparison">对比评测</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 OPPO Reno3 评测指南. All Rights Reserved. 本页面内容仅供参考。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
